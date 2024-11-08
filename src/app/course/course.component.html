@@ -1,0 +1,14 @@
+<div class="container-fluid">
+<div class="row" >
+  <div class="col-3 card-content" *ngFor="let course of courses">
+    <div class="card" style="width: 18rem">
+      <img src="{{ course.image }}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ course.title }}</h5>
+        <p class="card-text truncated-text">{{ course.description }}</p>
+        <a routerLink="/course-description" class="btn btn-primary">Saiba mais</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

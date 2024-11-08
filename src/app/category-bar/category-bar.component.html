@@ -1,0 +1,18 @@
+<div class="background">
+  <ul class="list-group">
+    <li class="cardCategoria" *ngFor="let category of categories">
+      <!-- adiciono o link para os cursos, passo como parâmetro o id da categoria -->
+      <a routerLink="/course/{{ category.id }}">
+        <div class="card_img">
+          <!-- Aqui eu crio uma nova div para a imagem com o nome de classe card_img -->
+          <img src="{{ category.image }}" alt="user-image" />
+        </div>
+        <div class="card_info">
+          <!-- Aqui eu crio uma nova div para informações do usuário com nome de classe card_info -->
+          <span>{{ category.title }}</span>
+        </div>
+     </a>
+    </li>
+  </ul>
+  <button class="btn btn-primary" routerLink="/category/new">Novo</button>
+</div>
